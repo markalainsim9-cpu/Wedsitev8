@@ -1,0 +1,301 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-script: 'Alex Brush', cursive;
+    --font-display: 'Cinzel', 'Cormorant Garamond', serif;
+    --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #18232c;
+    background-color: #f0f4f8;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-serif {
+    font-family: var(--font-serif);
+    color: #18232c;
+  }
+}
+
+.font-script {
+  font-family: 'Alex Brush', cursive;
+}
+
+.font-display {
+  font-family: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Curated Wedding Theme Typography */
+.font-wedding-cormorant {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+.font-wedding-great-vibes {
+  font-family: 'Great Vibes', cursive;
+}
+.font-wedding-pinyon {
+  font-family: 'Pinyon Script', cursive;
+}
+.font-wedding-alex-brush {
+  font-family: 'Alex Brush', cursive;
+}
+.font-wedding-parisienne {
+  font-family: 'Parisienne', cursive;
+}
+.font-wedding-italianno {
+  font-family: 'Italianno', cursive;
+}
+.font-wedding-playfair {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+.font-wedding-cinzel {
+  font-family: 'Cinzel', Georgia, serif;
+}
+.font-wedding-bodoni {
+  font-family: 'Bodoni Moda', Georgia, serif;
+}
+.font-wedding-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Classic & Romantic Dusty Blue Stationery Card */
+.glass-card {
+  background: #ffffff;
+  border: 1px solid #c8d7e3;
+  box-shadow: 0 16px 40px -12px rgba(45, 75, 100, 0.1), 0 2px 8px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+.romantic-stationery-card {
+  background: #ffffff;
+  border: 1px solid #c8d7e3;
+  box-shadow: 0 20px 48px -12px rgba(45, 75, 100, 0.12), 0 3px 10px rgba(0, 0, 0, 0.03);
+  position: relative;
+}
+
+/* Subtle Inset Double-Rule Stationery Frame */
+.stationery-frame {
+  position: relative;
+}
+.stationery-frame::before {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  pointer-events: none;
+  border-radius: calc(1.5rem - 6px);
+}
+
+/* Classic Monogram Wax Seal Badge */
+.wax-seal {
+  background: radial-gradient(circle at 35% 35%, #5d7e98 0%, #3a5a74 60%, #1e3447 100%);
+  box-shadow: 0 4px 14px rgba(30, 52, 71, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.35);
+  border: 2px solid #243c50;
+}
+
+/* ==========================================================================
+   5 CURATED LUXURY WEDDING THEMES: PALETTES & ATMOSPHERIC TOKENS
+   ========================================================================== */
+
+:root,
+[data-wedding-theme="dusty-blue"] {
+  --wedding-primary: #3a5a74;
+  --wedding-primary-hover: #274155;
+  --wedding-primary-dark: #243c50;
+  --wedding-primary-light: #ebf2f7;
+  --wedding-primary-faint: #f4f8fa;
+  --wedding-accent: #c5a059;
+  --wedding-accent-light: #f7f1e4;
+  --wedding-border: #c8d7e3;
+  --wedding-bg: #f0f4f8;
+  --wedding-card-shadow: rgba(45, 75, 100, 0.12);
+  --wedding-seal-from: #5d7e98;
+  --wedding-seal-to: #1e3447;
+  --wedding-seal-border: #243c50;
+  --wedding-text-primary: #18232c;
+  --wedding-text-muted: #506173;
+}
+
+[data-wedding-theme="burgundy"] {
+  --wedding-primary: #7b1e34;
+  --wedding-primary-hover: #601426;
+  --wedding-primary-dark: #521221;
+  --wedding-primary-light: #f5e5e8;
+  --wedding-primary-faint: #faf0f2;
+  --wedding-accent: #d4a373;
+  --wedding-accent-light: #fbf4ec;
+  --wedding-border: #dec2c7;
+  --wedding-bg: #fbf3f4;
+  --wedding-card-shadow: rgba(123, 30, 52, 0.12);
+  --wedding-seal-from: #9e2a44;
+  --wedding-seal-to: #420a16;
+  --wedding-seal-border: #4a0e1a;
+  --wedding-text-primary: #291216;
+  --wedding-text-muted: #6d434b;
+}
+
+[data-wedding-theme="emerald"] {
+  --wedding-primary: #26533e;
+  --wedding-primary-hover: #1b3d2d;
+  --wedding-primary-dark: #173627;
+  --wedding-primary-light: #e3ece6;
+  --wedding-primary-faint: #f0f6f2;
+  --wedding-accent: #b89758;
+  --wedding-accent-light: #f7f3e9;
+  --wedding-border: #c2d6ca;
+  --wedding-bg: #f0f5f2;
+  --wedding-card-shadow: rgba(38, 83, 62, 0.12);
+  --wedding-seal-from: #3c775c;
+  --wedding-seal-to: #163325;
+  --wedding-seal-border: #142e21;
+  --wedding-text-primary: #14231b;
+  --wedding-text-muted: #486354;
+}
+
+[data-wedding-theme="navy"] {
+  --wedding-primary: #1e2b4a;
+  --wedding-primary-hover: #141d33;
+  --wedding-primary-dark: #101728;
+  --wedding-primary-light: #e2e7f2;
+  --wedding-primary-faint: #f0f3f9;
+  --wedding-accent: #dfb251;
+  --wedding-accent-light: #fdf7e7;
+  --wedding-border: #bdc8dd;
+  --wedding-bg: #eef1f7;
+  --wedding-card-shadow: rgba(30, 43, 74, 0.14);
+  --wedding-seal-from: #2c3e6b;
+  --wedding-seal-to: #0f1729;
+  --wedding-seal-border: #0d1525;
+  --wedding-text-primary: #111726;
+  --wedding-text-muted: #4a5b7d;
+}
+
+[data-wedding-theme="champagne"] {
+  --wedding-primary: #8c6d4f;
+  --wedding-primary-hover: #72573e;
+  --wedding-primary-dark: #5e4731;
+  --wedding-primary-light: #f3ede2;
+  --wedding-primary-faint: #fbf8f3;
+  --wedding-accent: #c49a78;
+  --wedding-accent-light: #f9f2eb;
+  --wedding-border: #e0d4c3;
+  --wedding-bg: #f9f6f0;
+  --wedding-card-shadow: rgba(140, 109, 79, 0.12);
+  --wedding-seal-from: #b89371;
+  --wedding-seal-to: #61442b;
+  --wedding-seal-border: #523821;
+  --wedding-text-primary: #2b221a;
+  --wedding-text-muted: #6b5441;
+}
+
+/* ==========================================================================
+   DYNAMIC WEDDING THEME RULE OVERRIDES
+   ========================================================================== */
+
+[data-wedding-theme] .wax-seal {
+  background: radial-gradient(circle at 35% 35%, var(--wedding-seal-from) 0%, var(--wedding-primary) 60%, var(--wedding-seal-to) 100%) !important;
+  border-color: var(--wedding-seal-border) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25), inset 0 1px 2px rgba(255, 255, 255, 0.35) !important;
+}
+
+[data-wedding-theme] .glass-card,
+[data-wedding-theme] .romantic-stationery-card {
+  border-color: var(--wedding-border) !important;
+  box-shadow: 0 20px 48px -12px var(--wedding-card-shadow), 0 3px 10px rgba(0, 0, 0, 0.03) !important;
+}
+
+[data-wedding-theme] .stationery-frame::before {
+  border-color: color-mix(in srgb, var(--wedding-accent) 45%, transparent) !important;
+}
+
+/* Dynamic theme overrides for common color utilities */
+[data-wedding-theme] .text-\[\#3A5A74\],
+[data-wedding-theme] .text-\[\#3a5a74\] {
+  color: var(--wedding-primary) !important;
+}
+
+[data-wedding-theme] .bg-\[\#3A5A74\],
+[data-wedding-theme] .bg-\[\#3a5a74\] {
+  background-color: var(--wedding-primary) !important;
+}
+
+[data-wedding-theme] .bg-\[\#ebf2f7\] {
+  background-color: var(--wedding-primary-light) !important;
+}
+
+[data-wedding-theme] .border-\[\#c8d7e3\] {
+  border-color: var(--wedding-border) !important;
+}
+
+[data-wedding-theme] .hover\:bg-\[\#274155\]:hover,
+[data-wedding-theme] .hover\:bg-\[\#2c4559\]:hover {
+  background-color: var(--wedding-primary-hover) !important;
+}
+
+[data-wedding-theme] .hover\:bg-\[\#ebf2f7\]:hover,
+[data-wedding-theme] .hover\:bg-\[\#dbe7f0\]:hover {
+  background-color: var(--wedding-primary-light) !important;
+}
+
+[data-wedding-theme] .hover\:text-\[\#3A5A74\]:hover,
+[data-wedding-theme] .hover\:text-\[\#3a5a74\]:hover {
+  color: var(--wedding-primary) !important;
+}
+
+[data-wedding-theme] .border-\[\#274155\] {
+  border-color: var(--wedding-primary-dark) !important;
+}
+
+[data-wedding-theme] .focus\:ring-\[\#3A5A74\]:focus {
+  --tw-ring-color: var(--wedding-primary) !important;
+}
+
+@keyframes bounceEqualizer {
+  0% { height: 4px; }
+  100% { height: 18px; }
+}
+
+.equalizer-bar {
+  animation: bounceEqualizer 1.2s infinite ease-in-out alternate;
+}
+
+.equalizer-bar:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.equalizer-bar:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* ==========================================================================
+   GOLD-FOIL STATIONERY & CALLIGRAPHY EFFECTS
+   ========================================================================== */
+
+.gold-foil-border-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 1rem;
+}
+
+.gold-foil-border-card::before {
+  content: '';
+  position: absolute;
+  inset: -1.5px;
+  border-radius: calc(1rem + 1.5px);
+  background: linear-gradient(135deg, #c5a059 0%, #faeec7 25%, #b38b3f 50%, #faeec7 75%, #c5a059 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.gold-foil-glow {
+  box-shadow: 0 4px 20px -2px rgba(197, 160, 89, 0.2), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+}
+
+.gold-foil-text {
+  background: linear-gradient(135deg, #8a6e38 0%, #c5a059 40%, #8a6e38 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+

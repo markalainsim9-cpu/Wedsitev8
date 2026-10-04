@@ -1,0 +1,110 @@
+{
+  "entities": {
+    "EventConfig": {
+      "title": "EventConfig",
+      "description": "Wedding event configuration and details",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "subHeader": { "type": "string" },
+        "subHeaderEnabled": { "type": "boolean" },
+        "invitationLine": { "type": "string" },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "venue": { "type": "string" },
+        "churchName": { "type": "string" },
+        "churchAddress": { "type": "string" },
+        "guestbookEnabled": { "type": "boolean" },
+        "guestbookPostingEnabled": { "type": "boolean" },
+        "giftEnabled": { "type": "boolean" },
+        "giftEyebrow": { "type": "string" },
+        "giftTitle": { "type": "string" },
+        "giftSubtitle": { "type": "string" },
+        "giftQrImage": { "type": "string" },
+        "giftBankName": { "type": "string" },
+        "giftAccountName": { "type": "string" },
+        "giftAccountNumber": { "type": "string" },
+        "giftNotes": { "type": "string" },
+        "giftQrList": { "type": "array" },
+        "totalTables": { "type": "number" },
+        "seatsPerTable": { "type": "number" },
+        "timezone": { "type": "string" }
+      }
+    },
+    "Guest": {
+      "title": "Guest",
+      "description": "Wedding guest and RSVP response",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "attending": { "type": "string" },
+        "count": { "type": "number" },
+        "table": { "type": "string" },
+        "seat": { "type": "string" },
+        "meal": { "type": "string" },
+        "song": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    },
+    "GuestbookEntry": {
+      "title": "GuestbookEntry",
+      "description": "Wishes and love messages left by wedding guests in the guestbook, with optional video blessings",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "message": { "type": "string" },
+        "relationship": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "timestamp": { "type": "number" },
+        "videoUrl": { "type": "string" },
+        "videoDuration": { "type": "number" },
+        "videoThumbnail": { "type": "string" },
+        "isFeatured": { "type": "boolean" },
+        "featuredAt": { "type": "string" }
+      },
+      "required": ["name", "message"]
+    },
+    "GuestbookMeta": {
+      "title": "GuestbookMeta",
+      "description": "Metadata for guestbook initialization and deleted IDs",
+      "type": "object",
+      "properties": {
+        "seeded": { "type": "boolean" },
+        "timestamp": { "type": "number" },
+        "seededAt": { "type": "string" }
+      }
+    },
+    "TestConnection": {
+      "title": "TestConnection",
+      "description": "Initial connection probe document",
+      "type": "object",
+      "properties": {
+        "status": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "/event_config/{docId}": {
+      "schema": "EventConfig",
+      "description": "Wedding event configuration and details"
+    },
+    "/guests/{guestId}": {
+      "schema": "Guest",
+      "description": "Wedding guest and RSVP response"
+    },
+    "/guestbook/{entryId}": {
+      "schema": "GuestbookEntry",
+      "description": "Wishes and love messages left by wedding guests"
+    },
+    "/guestbook_meta/{docId}": {
+      "schema": "GuestbookMeta",
+      "description": "Metadata for guestbook initialization and deleted IDs"
+    },
+    "/test/{docId}": {
+      "schema": "TestConnection",
+      "description": "Initial connection probe document"
+    }
+  }
+}

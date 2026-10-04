@@ -1,0 +1,11 @@
+{
+  "name": "Invitation \u0026 RSVP v7",
+  "description": "Interactive event invitation and RSVP manager with seating lookup, background music, digital guest pass, host monitoring dashboard, and live visual \u0026 HTML editor.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
